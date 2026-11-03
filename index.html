@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arizona Immigration — professional immigration, visa and international opportunity support.">
+  <title>Arizona Immigration | Your Journey Starts Here</title>
+  <style>
+    :root {
+      --navy: #10243d;
+      --navy-deep: #0a192b;
+      --red: #c9363e;
+      --red-dark: #a92730;
+      --ink: #1b2938;
+      --muted: #667487;
+      --paper: #ffffff;
+      --soft: #f3f6fa;
+      --line: #e3e9f0;
+      --gold: #d6b36a;
+      --shadow: 0 18px 45px rgba(10, 25, 43, .12);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1140px, calc(100% - 40px)); margin: 0 auto; }
+    .topbar {
+      background: var(--navy-deep); color: #dbe4ef; font-size: 12px;
+      padding: 8px 0;
+    }
+    .topbar-inner { display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+    .topbar span { opacity:.9; }
+    header {
+      position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.96);
+      backdrop-filter: blur(12px); border-bottom: 1px solid var(--line);
+    }
+    .nav { min-height: 82px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { display: flex;
+  align-items: center;
+  min-width: 220px;
+}
+
+.brand-logo {
+  width: 220px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+      .brand-mark {width:46px; height:46px; border-radius:12px; display:grid; place-items:center;
+      color:#fff; font-weight:800; font-size:17px; letter-spacing:-1px;
+      background:linear-gradient(145deg,var(--red),#8f202a); box-shadow:0 7px 18px rgba(201,54,62,.22);
+    }
+    .brand-name { color:var(--navy); font-weight:800; font-size:17px; line-height:1.1; letter-spacing:.3px; }
+    .brand-sub { display:block; color:var(--muted); font-size:9px; letter-spacing:2px; margin-top:5px; font-weight:700; }
+    .nav-links { display:flex; align-items:center; gap:24px; font-size:13px; font-weight:700; color:#35465a; }
+    .nav-links a:hover { color:var(--red); }
+    .nav-cta, .btn {
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      padding:12px 19px; border-radius:6px; font-size:13px; font-weight:700;
+      transition:.2s ease; cursor:pointer; border:1px solid transparent;
+    }
+    .nav-cta, .btn-red { color:#fff; background:var(--red); }
+    .nav-cta:hover, .btn-red:hover { background:var(--red-dark); transform:translateY(-1px); }
+    .btn-outline { color:#fff; border-color:rgba(255,255,255,.55); background:transparent; }
+    .btn-outline:hover { background:#fff; color:var(--navy); }
+    .menu-toggle { display:none; border:0; background:none; font-size:25px; color:var(--navy); cursor:pointer; }
+    .hero {
+      position:relative; overflow:hidden; color:#fff;
+      background:
+        radial-gradient(circle at 82% 25%, rgba(201,54,62,.30), transparent 28%),
+        linear-gradient(115deg, rgba(8,24,43,.98) 0%, rgba(16,36,61,.94) 58%, rgba(25,48,73,.91) 100%);
+    }
+    .hero:after {
+      content:""; position:absolute; width:500px; height:500px; border:1px solid rgba(255,255,255,.09);
+      border-radius:50%; right:-130px; top:-150px; box-shadow:0 0 0 55px rgba(255,255,255,.025),0 0 0 110px rgba(255,255,255,.02);
+    }
+    .hero-grid { min-height:480px; display:grid; grid-template-columns:1fr; align-items:center; gap:45px; padding-top:65px; padding-bottom:65px; position:relative; z-index:1; }
+    .eyebrow { display:inline-flex; align-items:center; gap:10px; color:#f0c7c9; text-transform:uppercase; letter-spacing:2.2px; font-size:10px; font-weight:800; }
+    .eyebrow:before { content:""; width:30px; height:2px; background:var(--red); }
+    h1 { font-size:clamp(40px,5.5vw,66px); line-height:1.08; letter-spacing:-2px; margin:20px 0; max-width:680px; }
+    h1 em { color:#f17a7f; font-style:normal; }
+    .hero-copy { max-width:560px; color:#d4deea; font-size:16px; margin:0 0 30px; }
+    .hero-actions { display:flex; gap:13px; flex-wrap:wrap; }
+    .hero-note { display:flex; align-items:center; gap:12px; margin-top:35px; color:#c6d1df; font-size:12px; }
+    .note-line { width:34px; height:1px; background:var(--gold); }
+    .hero-visual { min-height:390px; display:grid; place-items:center; position:relative; }
+    .visual-frame {
+      width:min(100%,430px); height:390px; border:1px solid rgba(255,255,255,.2);
+      border-radius:18px; padding:14px; background:rgba(255,255,255,.055);
+      box-shadow:0 28px 65px rgba(0,0,0,.24); transform:rotate(1.5deg);
+    } 
+    .hero-engineer-photo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 11px;
+  background: #ffffff;
+}
+    .visual-placeholder {
+      width:100%; height:100%; border-radius:11px; border:1px dashed rgba(255,255,255,.4);
+      background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.035));
+      display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:28px;
+    }
+    .placeholder-icon { width:66px; height:66px; border-radius:50%; display:grid; place-items:center; font-size:27px; color:#fff; border:1px solid rgba(255,255,255,.4); margin-bottom:17px; }
+    .visual-placeholder strong { font-size:18px; }
+    .visual-placeholder small { color:#c7d4e3; max-width:240px; margin-top:8px; font-size:12px; }
+    .floating-card {
+      position:absolute; bottom:24px; left:-5px; background:#fff; color:var(--navy);
+      padding:15px 18px; border-radius:9px; box-shadow:var(--shadow); font-size:12px; font-weight:700;
+    }
+    .floating-card span { display:block; color:var(--muted); font-size:10px; font-weight:400; margin-top:3px; }
+    .trust-strip { background:#fff; border-bottom:1px solid var(--line); }
+    .trust-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; padding:25px 0; }
+    .trust-item { display:flex; align-items:center; justify-content:center; gap:12px; color:var(--navy); font-weight:700; font-size:13px; }
+    .trust-icon { width:34px; height:34px; display:grid; place-items:center; border-radius:50%; background:#fbecee; color:var(--red); font-size:16px; }
+    section { padding:76px 0; }
+    .section-head { margin-bottom:30px; }
+    .about-copy > h2 { margin-top:0; }
+    .hero h1 { max-width:760px; }
+    .section-head { max-width:650px; margin-bottom:42px; }
+    .section-kicker { color:var(--red); text-transform:uppercase; font-size:10px; font-weight:800; letter-spacing:2px; }
+    h2 { color:var(--navy); font-size:clamp(29px,3.5vw,42px); line-height:1.15; letter-spacing:-1px; margin:12px 0 14px; }
+    .section-head p { color:var(--muted); margin:0; font-size:15px; }
+    .about-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:65px; align-items:center; }
+    .about-art {
+      min-height:420px; border-radius:18px; background:var(--navy);
+      position:relative; overflow:hidden; padding:0; box-shadow:0 18px 42px rgba(10,25,43,.16);
+      isolation:isolate;
+    }
+    .about-leader-photo { width:100%; height:100%; min-height:420px; display:block; object-fit:cover; object-position:center 24%; }
+    .about-leader-caption { position:absolute; inset:auto 0 0; padding:52px 24px 22px; color:#fff;
+      background:linear-gradient(transparent,rgba(7,26,48,.94)); text-align:left; }
+    .about-leader-caption strong { display:block; font-size:18px; line-height:1.35; }
+    .about-leader-caption span { display:block; color:#f0c96b; font-size:12px; font-weight:700; margin-top:6px; }
+    body[dir="rtl"] .about-leader-caption { text-align:right; }
+    .about-copy p { color:var(--muted); font-size:14px; }
+    .vision-box { margin-top:28px; padding:22px 24px; border-left:4px solid var(--red); background:var(--soft); border-radius:0 12px 12px 0; }
+    .vision-box h3 { margin:5px 0 8px; color:var(--navy); font-size:21px; }
+    .vision-box p { margin:0; color:var(--muted); font-size:14px; line-height:1.85; }
+    body[dir="rtl"] .vision-box { border-left:0; border-right:4px solid var(--red); border-radius:12px 0 0 12px; }
+    .feature-list { display:grid; grid-template-columns:1fr 1fr; gap:15px; margin-top:25px; }
+    .feature { display:flex; gap:10px; font-size:13px; font-weight:700; color:var(--navy); }
+    .check { color:var(--red); font-weight:900; }
+    .services { background:var(--soft); }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .card { background:#fff; border:1px solid var(--line); border-radius:12px; padding:27px; transition:.2s; }
+    .card:hover { transform:translateY(-5px); box-shadow:var(--shadow); border-color:#d6dfe9; }
+    .card-icon { width:48px; height:48px; display:grid; place-items:center; background:#fbecee; color:var(--red); border-radius:10px; font-size:22px; margin-bottom:20px; }
+    .card h3 { color:var(--navy); margin:0 0 9px; font-size:17px; }
+    .card p { color:var(--muted); font-size:13px; margin:0 0 17px; }
+    .text-link { color:var(--red); font-size:12px; font-weight:800; }
+    .leadership-grid { display:grid; grid-template-columns:.8fr 1.2fr; gap:60px; align-items:center; }
+    .leader-photo {
+      min-height:390px; border-radius:15px; background:linear-gradient(145deg,#e8edf3,#d7e0ea);
+      border:1px dashed #aebdcd; display:flex; align-items:center; justify-content:center; text-align:center; padding:30px;
+    }
+    .leader-photo div { color:var(--navy); }
+    .leader-photo .camera { font-size:35px; margin-bottom:10px; }
+    .leader-photo strong { display:block; font-size:16px; }
+    .leader-photo small { display:block; color:var(--muted); max-width:230px; margin:8px auto 0; font-size:12px; }
+    .leader-copy .role { color:var(--red); text-transform:uppercase; font-size:10px; font-weight:800; letter-spacing:2px; }
+    .leader-copy p { color:var(--muted); font-size:14px; }
+    .quote { margin-top:25px; padding:18px 20px; border-left:3px solid var(--red); background:var(--soft); color:var(--navy); font-weight:700; font-size:14px; }
+    .process { background:var(--navy); color:#fff; }
+    .process h2 { color:#fff; }
+    .process .section-head p { color:#c2cedb; }
+    .steps { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+    .step { border-top:1px solid rgba(255,255,255,.25); padding-top:20px; }
+    .step-number { color:#f17a7f; font-size:12px; font-weight:800; letter-spacing:2px; }
+    .step h3 { font-size:16px; margin:10px 0 7px; }
+    .step p { color:#c2cedb; font-size:12px; margin:0; }
+    .news-grid { display:grid; grid-template-columns:1.2fr .8fr; gap:20px; }
+    .news-feature { min-height:245px; background:linear-gradient(120deg,#f0f3f7,#e3e9f0); border-radius:12px; padding:30px; display:flex; flex-direction:column; justify-content:flex-end; }
+    .news-tag { color:var(--red); text-transform:uppercase; letter-spacing:1.5px; font-size:10px; font-weight:800; }
+    .news-feature h3 { color:var(--navy); font-size:22px; margin:10px 0; }
+    .news-feature p { color:var(--muted); font-size:13px; max-width:500px; margin:0; }
+    .news-side { display:grid; gap:15px; }
+    .news-mini { border:1px solid var(--line); border-radius:10px; padding:20px; }
+    .news-mini h3 { color:var(--navy); font-size:15px; margin:8px 0 5px; }
+    .news-mini p { color:var(--muted); font-size:12px; margin:0; }
+    .contact { background:var(--soft); }
+    .contact-grid { display:grid; grid-template-columns:.8fr 1.2fr; gap:50px; }
+    .contact-info p { color:var(--muted); font-size:14px; }
+    .contact-detail { margin-top:20px; color:var(--navy); font-size:13px; font-weight:700; }
+    .contact-detail span { display:block; color:var(--muted); font-weight:400; font-size:12px; }
+    form { background:#fff; padding:28px; border-radius:12px; border:1px solid var(--line); box-shadow:0 10px 30px rgba(10,25,43,.05); }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:15px; }
+    label { display:block; font-size:11px; color:var(--navy); font-weight:800; margin:0 0 6px; }
+    input, select, textarea { width:100%; border:1px solid #dce3eb; border-radius:6px; padding:12px; font:inherit; font-size:12px; margin-bottom:15px; background:#fff; color:var(--ink); }
+    textarea { min-height:105px; resize:vertical; }
+    input:focus, select:focus, textarea:focus { outline:2px solid rgba(201,54,62,.15); border-color:var(--red); }
+    .form-note { color:var(--muted); font-size:10px; margin:12px 0 0; }
+    footer { background:var(--navy-deep); color:#d5dfeb; padding:48px 0 22px; }
+    .footer-grid { display:grid; grid-template-columns:1.3fr .7fr .8fr; gap:35px; padding-bottom:35px; }
+    footer .brand-name { color:#fff; }
+    footer .brand-sub { color:#aebdce; }
+    footer p { color:#aebdce; font-size:12px; max-width:330px; }
+    footer h4 { color:#fff; font-size:12px; margin:0 0 14px; }
+    .footer-links { display:grid; gap:8px; font-size:12px; color:#b9c6d5; }
+    .copyright { border-top:1px solid rgba(255,255,255,.13); padding-top:18px; color:#8fa1b5; font-size:10px; display:flex; justify-content:space-between; gap:15px; flex-wrap:wrap; }
+    .disclaimer { font-size:10px; color:#aebdce; margin-top:14px; max-width:760px; }
+    @media (max-width: 900px) {
+      .nav-links { gap:13px; font-size:11px; }
+      .nav-cta { padding:10px 12px; }
+      .hero-grid { gap:25px; }
+      .cards { grid-template-columns:repeat(2,1fr); }
+      .steps { grid-template-columns:repeat(2,1fr); row-gap:30px; }
+    }
+    @media (max-width: 700px) {
+      .container { width:min(100% - 30px, 560px); }
+      .topbar-inner { justify-content:center; }
+      .nav { min-height:70px; }
+      .menu-toggle { display:block; }
+      .nav-links { display:none; position:absolute; top:70px; left:0; right:0; padding:18px 22px; background:#fff; border-bottom:1px solid var(--line); flex-direction:column; align-items:stretch; gap:15px; }
+      .nav-links.open { display:flex; }
+      .nav-cta { text-align:center; }
+      .hero-grid, .about-grid, .leadership-grid, .contact-grid, .news-grid { grid-template-columns:1fr; }
+      .hero-grid { padding-top:55px; padding-bottom:55px; }
+      .hero-visual { min-height:330px; }
+      .visual-frame { height:315px; }
+      .floating-card { left:0; bottom:8px; }
+      .trust-grid { grid-template-columns:1fr; gap:13px; }
+      .trust-item { justify-content:flex-start; }
+      section { padding:65px 0; }
+      .about-grid, .leadership-grid, .contact-grid { gap:30px; }
+      .about-art { min-height:260px; }
+      .cards { grid-template-columns:1fr; }
+      .steps { grid-template-columns:1fr 1fr; }
+      .form-row { grid-template-columns:1fr; gap:0; }
+      .footer-grid { grid-template-columns:1fr 1fr; }
+      .footer-grid > div:first-child { grid-column:1/-1; }
+    }
+    @media (max-width: 420px) {
+      .steps, .footer-grid { grid-template-columns:1fr; }
+      .footer-grid > div:first-child { grid-column:auto; }
+      h1 { letter-spacing:-1.2px; }
+    } /* Destination Cards */
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 40px;
+}
+
+.destination-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 190px;
+  padding: 25px;
+  border: 1px solid #e5e8ee;
+  border-radius: 16px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: var(--navy);
+  font-family: inherit;
+}
+
+.destination-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
+  border-color: var(--red);
+}
+
+.destination-flag {
+  font-size: 42px;
+}
+
+.destination-card strong {
+  font-size: 19px;
+}
+
+.destination-card span:last-child {
+  font-size: 13px;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .destination-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .destination-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* VISA INQUIRY FORM */
+
+#inquiryForm {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #e5e8ee;
+  border-radius: 16px;
+}
+
+#visaInquiryForm {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+#visaInquiryForm .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#visaInquiryForm label {
+  font-weight: 600;
+  color: var(--navy);
+}
+
+#visaInquiryForm input,
+#visaInquiryForm textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #dce1e8;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  box-sizing: border-box;
+  margin-bottom: 0;
+}
+
+#visaInquiryForm input[readonly] {
+  background: #f2f4f7;
+}
+
+#visaInquiryForm textarea {
+  resize: vertical;
+}
+
+#visaInquiryForm button {
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  #inquiryForm {
+    padding: 20px;
+  }
+}
+
+/* Refined visual system and responsive polish */
+:root { --navy:#10243d; --navy-deep:#091727; --red:#c9363e; --gold:#d6b36a; --soft:#f5f7fa; }
+body { font-family: Inter, "Segoe UI", Arial, sans-serif; }
+.container { width:min(1180px, calc(100% - 44px)); }
+.topbar { letter-spacing:.2px; }
+header { box-shadow:0 5px 24px rgba(9,23,39,.055); }
+.nav { min-height:88px; }
+.brand { min-width:0; }
+.brand-logo { width:205px; max-height:68px; }
+.brand-fallback:after { content:"ARIZONA IMMIGRATION"; color:var(--navy); font-weight:900; letter-spacing:1px; font-size:15px; }
+.nav-links { gap:21px; }
+.nav-links a { transition:color .2s ease; }
+.nav-cta, .btn { border-radius:8px; min-height:46px; }
+.hero { background:radial-gradient(circle at 82% 25%,rgba(201,54,62,.28),transparent 28%),linear-gradient(115deg,#08182b 0%,#102b49 58%,#1c3a58 100%); }
+.hero-grid { min-height:480px; }
+.hero-copy { line-height:1.85; }
+.visual-frame { transform:rotate(0); border-radius:22px; padding:10px; }
+.hero-engineer-photo { border-radius:14px; }
+.photo-fallback { background:linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.035)); }
+.photo-fallback:after { content:"Leadership portrait"; display:grid; place-items:center; height:100%; color:#fff; font-size:17px; font-weight:700; }
+.floating-card { left:-22px; bottom:15px; padding:17px 21px; border-left:4px solid var(--red); }
+.trust-strip { box-shadow:0 8px 24px rgba(16,36,61,.035); }
+section { padding:96px 0; }
+h2 { letter-spacing:-.7px; }
+.card, .destination-card, .news-mini, form, #inquiryForm { border-radius:16px; }
+.card { padding:30px; }
+.card-icon { border-radius:13px; }
+.destination-card { min-height:205px; box-shadow:0 8px 24px rgba(16,36,61,.045); }
+.destination-card:focus-visible, .btn:focus-visible, a:focus-visible, button:focus-visible { outline:3px solid rgba(201,54,62,.35); outline-offset:3px; }
+#visaOptions { padding:28px; border:1px solid var(--line); border-radius:18px; background:#fff; }
+#visaTypes { margin-top:24px; }
+#inquiryForm { box-shadow:0 12px 35px rgba(16,36,61,.07); }
+#visaInquiryForm button { width:100%; }
+.leader-photo { border:0; background:linear-gradient(145deg,#eaf0f6,#dce5ef); border-radius:20px; }
+.quote { border-radius:0 12px 12px 0; }
+.news-feature { border-radius:16px; background:linear-gradient(135deg,#eef2f7,#e2e9f1); }
+.news-mini { padding:23px; }
+.news-disclaimer { color:var(--muted); font-size:11px; margin-top:18px; }
+.contact-detail a { color:var(--red); }
+form { padding:34px; }
+input, select, textarea { border-radius:9px; padding:14px; font-size:14px; }
+footer .brand-logo { filter:brightness(0) invert(1); }
+@media (max-width:900px) { .nav-links { gap:12px; } .brand-logo { width:175px; } }
+@media (max-width:700px) {
+ .container { width:min(100% - 32px, 560px); }
+ .nav { min-height:72px; }
+ .brand-logo { width:165px; }
+ .nav-links { top:72px; padding:20px 24px; box-shadow:0 14px 20px rgba(9,23,39,.08); }
+ .nav-links a { font-size:14px; }
+ .hero-grid { min-height:0; }
+ .hero-visual { margin-top:15px; }
+ .floating-card { left:5px; bottom:0; }
+ section { padding:70px 0; }
+ #visaOptions { padding:18px; }
+ form { padding:22px; }
+}
+
+
+/* ===== ARIZONA MODERN DESIGN UPDATE ===== */
+:root {
+  --navy:#102b4e;
+  --navy-deep:#071a30;
+  --red:#df3546;
+  --red-dark:#b92235;
+  --ink:#17283d;
+  --muted:#596b80;
+  --paper:#ffffff;
+  --soft:#edf2f8;
+  --line:#d8e1ec;
+  --gold:#efc45f;
+  --shadow:0 18px 48px rgba(7,26,48,.14);
+}
+body {font-family:Inter,"Segoe UI",Arial,sans-serif; color:var(--ink); background:#fff;}
+.container {width:min(1200px,calc(100% - 48px));}
+.topbar {background:#061629;color:#e8eef6;padding:9px 0;font-size:11px;}
+header {background:rgba(255,255,255,.97);box-shadow:0 8px 28px rgba(7,26,48,.08);}
+.nav {min-height:84px;gap:16px;}
+.brand {min-width:0;flex:0 0 auto;}
+.brand-logo {width:190px;max-height:66px;}
+.nav-links {gap:clamp(9px,1.25vw,18px);font-size:12px;white-space:nowrap;}
+.nav-links a {padding:10px 0;position:relative;}
+.nav-links a:after {content:"";position:absolute;left:0;right:100%;bottom:2px;height:2px;background:var(--red);transition:right .2s ease;}
+.nav-links a:hover:after,.nav-links a:focus-visible:after {right:0;}
+.nav-cta,.btn {border-radius:9px;min-height:46px;padding:12px 17px;}
+.nav-cta {white-space:nowrap;box-shadow:0 7px 18px rgba(223,53,70,.2);}
+.hero {background:radial-gradient(circle at 82% 22%,rgba(239,196,95,.22),transparent 25%),radial-gradient(circle at 10% 90%,rgba(223,53,70,.22),transparent 32%),linear-gradient(118deg,#061629 0%,#102b4e 58%,#17456a 100%);}
+.hero-grid {min-height:610px;grid-template-columns:1.08fr .92fr;gap:55px;}
+.eyebrow {color:#ffd5d8;letter-spacing:2.5px;}
+.eyebrow:before {background:var(--gold);width:38px;}
+h1 {font-size:clamp(42px,5.2vw,68px);line-height:1.04;letter-spacing:-2.4px;}
+h1 em {color:#ff7882;}
+.hero-copy {font-size:16px;line-height:1.85;color:#e0e8f1;}
+.btn-red {box-shadow:0 10px 24px rgba(223,53,70,.25);}
+.btn-outline {border-color:rgba(255,255,255,.65);}
+.visual-frame {height:410px;width:min(100%,440px);padding:9px;border:1px solid rgba(255,255,255,.32);border-radius:24px;background:rgba(255,255,255,.09);transform:none;}
+.hero-engineer-photo {border-radius:17px;}
+.photo-fallback {background:linear-gradient(145deg,#24496d,#102b4e);display:grid;place-items:center;}
+.photo-fallback:after {content:"Arizona Immigration Leadership";color:#fff;font-size:18px;font-weight:800;text-align:center;padding:25px;}
+.floating-card {left:-18px;bottom:18px;border-left:4px solid var(--gold);border-radius:12px;padding:17px 20px;}
+.trust-strip {background:#fff;border-bottom:1px solid var(--line);}
+.trust-grid {padding:23px 0;}
+.trust-icon {background:#fff0f1;color:var(--red);}
+section {padding:92px 0;scroll-margin-top:100px;}
+.section-kicker {color:var(--red);letter-spacing:2.2px;}
+h2 {color:var(--navy);font-weight:800;letter-spacing:-1px;}
+.section-head p,.about-copy p,.leader-copy p,.contact-info p {line-height:1.8;}
+.about-art {background:linear-gradient(145deg,#dce8f5,#b9cde2);border:1px solid #c6d5e5;}
+.about-art:before {border:1px solid rgba(16,43,78,.2);}
+.about-art-inner b {font-size:68px;color:#102b4e;}
+.services {background:linear-gradient(180deg,#edf2f8 0%,#f7f9fc 100%);}
+.card {border:1px solid #dce4ed;border-radius:16px;padding:27px;box-shadow:0 7px 22px rgba(7,26,48,.045);}
+.card:hover {border-color:rgba(223,53,70,.45);box-shadow:var(--shadow);}
+.card-icon {background:#ffeaec;color:var(--red);}
+.destination-card {background:linear-gradient(150deg,#fff 0%,#f4f7fb 100%);border:1px solid #d6e0eb;border-radius:17px;box-shadow:0 8px 22px rgba(7,26,48,.06);min-height:195px;}
+.destination-card:hover {background:#fff;border-color:var(--red);box-shadow:0 16px 32px rgba(7,26,48,.12);}
+.destination-flag {font-size:44px;}
+#visaOptions {background:#e7eef7;border:1px solid #d0ddeb;border-radius:22px;padding:30px;}
+#visaTypes .destination-card {background:#fff;}
+#inquiryForm {background:#fff;border:1px solid #d6e0eb;box-shadow:0 16px 38px rgba(7,26,48,.09);}
+.leader-photo {min-height:390px;border:1px solid #c9d7e6;background:linear-gradient(145deg,#dce8f4,#b9cde0);border-radius:20px;}
+.leader-photo .camera {color:var(--red);font-size:42px;}
+.quote {background:#fff0f1;border-left-color:var(--red);border-radius:0 12px 12px 0;}
+.process {background:linear-gradient(120deg,#071a30,#12395e);}
+.process .section-kicker {color:var(--gold);}
+.step {border-top:2px solid rgba(255,255,255,.25);}
+.step-number {color:var(--gold);}
+.news-feature {background:linear-gradient(135deg,#dce8f4,#c7d8e9);border:1px solid #c4d4e4;border-radius:18px;}
+.news-mini {background:#fff;border:1px solid #dce4ed;border-radius:15px;}
+.contact {background:linear-gradient(180deg,#eaf0f7,#f5f7fb);}
+.contact-grid {align-items:start;}
+form {border:1px solid #d6e0eb;border-radius:18px;box-shadow:0 15px 38px rgba(7,26,48,.08);}
+input,select,textarea {border:1px solid #cbd7e4;border-radius:9px;min-height:46px;}
+input:focus,select:focus,textarea:focus {outline:3px solid rgba(223,53,70,.16);border-color:var(--red);}
+footer {background:linear-gradient(120deg,#061629,#102b4e);}
+footer .brand-logo {filter:brightness(0) invert(1);}
+.disclaimer {line-height:1.8;}
+@media(max-width:1100px) {
+ .nav {gap:10px}.brand-logo{width:160px}.nav-links{gap:9px;font-size:11px}.nav-cta{padding:10px 12px;font-size:11px}
+}
+@media(max-width:900px) {
+ .nav-links{gap:10px;white-space:normal;flex-wrap:wrap;justify-content:flex-end}
+ .hero-grid{gap:30px}.brand-logo{width:150px}
+}
+@media(max-width:700px) {
+ .container{width:min(100% - 32px,560px)}
+ .nav{min-height:72px}.brand-logo{width:165px}
+ .nav-links{top:72px;left:0;right:0;max-height:calc(100vh - 90px);overflow:auto;gap:13px;align-items:stretch;padding:18px 24px;box-shadow:0 16px 25px rgba(7,26,48,.12)}
+ .nav-links a{font-size:14px;padding:5px 0}
+ .nav-cta{display:none}
+ .hero-grid{min-height:0;padding-top:58px;padding-bottom:65px}
+ .visual-frame{height:330px}.floating-card{left:2px;bottom:0}
+ section{padding:68px 0}
+ #visaOptions{padding:18px}
+}
+@media(max-width:420px){h1{font-size:42px}.visual-frame{height:290px}.floating-card{font-size:11px;padding:13px 15px}}
+
+
+    .nav-tools{display:flex;align-items:center;gap:10px;flex-shrink:0}
+    .lang-toggle{border:1px solid var(--line);background:#fff;color:var(--navy);border-radius:8px;padding:10px 13px;font-weight:800;cursor:pointer;min-height:42px}
+    .lang-toggle:hover{border-color:var(--red);color:var(--red)}
+    body[dir="rtl"]{font-family:Tahoma,Arial,sans-serif}
+    body[dir="rtl"] .nav,body[dir="rtl"] .topbar-inner{direction:rtl}
+    body[dir="rtl"] .nav-links{direction:rtl}
+    body[dir="rtl"] .hero-grid,body[dir="rtl"] .about-grid,body[dir="rtl"] .leadership-grid,body[dir="rtl"] .contact-grid{direction:rtl}
+    body[dir="rtl"] .hero-copy,body[dir="rtl"] .about-copy,body[dir="rtl"] .leader-copy,body[dir="rtl"] .contact-info{text-align:right}
+    body[dir="rtl"] .feature-list,body[dir="rtl"] .trust-grid,body[dir="rtl"] .steps,body[dir="rtl"] .cards,body[dir="rtl"] .destination-grid{direction:rtl}
+    body[dir="rtl"] .quote{border-left:0;border-right:3px solid var(--red);border-radius:12px 0 0 12px}
+    body[dir="rtl"] .floating-card{left:auto;right:-22px;border-left:0;border-right:4px solid var(--red)}
+    body[dir="rtl"] .eyebrow:before{order:2}
+    body[dir="rtl"] label,body[dir="rtl"] input,body[dir="rtl"] textarea,body[dir="rtl"] select{text-align:right}
+    body[dir="rtl"] .leader-photo{text-align:center}
+    @media(max-width:700px){.nav-tools{gap:7px}.lang-toggle{padding:8px 10px}.nav-cta{font-size:11px}}
+  
+/* Clear Arizona Immigration brand lockup */
+.brand {display:flex;align-items:center;text-decoration:none;flex:0 0 auto;min-width:max-content;}
+.brand-lockup {display:inline-flex;align-items:center;gap:11px;min-height:58px;}
+.brand-emblem {width:54px;height:54px;position:relative;display:grid;place-items:center;overflow:hidden;border-radius:13px;background:linear-gradient(145deg,#12395e,#061629);border:2px solid #d6b36a;box-shadow:0 5px 14px rgba(7,26,48,.16);}
+.brand-emblem span {font-size:22px;font-weight:950;letter-spacing:-2px;color:#fff;line-height:1;z-index:1;}
+.brand-emblem i {position:absolute;width:48px;height:4px;background:#c9363e;transform:rotate(-45deg);bottom:12px;right:-11px;border-radius:4px;}
+.brand-wordmark {display:flex;flex-direction:column;line-height:1;gap:5px;}
+.brand-wordmark strong {font-size:21px;letter-spacing:1.1px;font-weight:950;color:#102b4e;}
+.brand-wordmark small {font-size:10px;letter-spacing:3.1px;font-weight:800;color:#c9363e;}
+footer .brand-emblem {background:#fff;border-color:#d6b36a;}
+footer .brand-emblem span {color:#102b4e;}
+footer .brand-wordmark strong {color:#fff;}
+footer .brand-wordmark small {color:#ff8b92;}
+@media(max-width:1100px){.brand-emblem{width:48px;height:48px}.brand-wordmark strong{font-size:18px}.brand-wordmark small{font-size:9px;letter-spacing:2.5px}}
+@media(max-width:700px){.brand-lockup{gap:8px}.brand-emblem{width:43px;height:43px;border-radius:11px}.brand-emblem span{font-size:19px}.brand-wordmark strong{font-size:16px}.brand-wordmark small{font-size:8px;letter-spacing:2px}}
+
+
+/* ===== Screenshot-matched Arizona homepage header / hero / footer ===== */
+:root{--navy:#08265d;--navy-deep:#031b4d;--red:#e00018;--red-dark:#b90016;--gold:#f5bd3c}
+body{font-family:Arial,Helvetica,sans-serif;color:#102b61}
+.container{width:min(1428px,calc(100% - 72px))}
+.topbar{height:51px;padding:0;background:#061f56 url("arizona-global-hero.jpg") center 5%/cover;color:#fff}
+.topbar-inner{height:51px;display:flex;align-items:center;justify-content:space-between;flex-wrap:nowrap}
+.top-contact{display:flex;align-items:center;gap:42px;font-size:16px;font-weight:600}
+.top-contact a{display:flex;align-items:center;gap:14px;color:#fff}
+.top-contact i{height:24px;width:2px;background:rgba(255,255,255,.85)}
+.top-icon{font-size:25px;line-height:1}
+.top-language{display:flex;align-items:center;gap:22px}
+.top-language b{height:23px;width:2px;background:#fff}
+.top-lang{border:0;background:transparent;color:#fff;font-weight:700;font-size:16px;padding:7px 14px;cursor:pointer}
+.top-lang.active{background:#e00018;border-radius:12px;padding:7px 19px}
+header{position:relative;top:auto;background:#fff;border:0;box-shadow:0 3px 15px rgba(0,20,70,.06)}
+.nav{min-height:112px;gap:25px}
+.brand{min-width:0}
+.arizona-official-logo{width:310px;max-width:100%;height:auto;display:block}
+.nav-links{display:flex;align-items:center;gap:26px;color:#092963;font-size:18px;font-weight:700;white-space:nowrap}
+.nav-links a{padding:13px 0}
+.nav-links a:after{display:none}
+.nav-links a.active{background:#df0018;color:#fff;padding:12px 24px;border-radius:14px}
+.nav-dropdown a span{font-size:22px;margin-left:5px}
+.nav-tools{display:flex;align-items:center;gap:12px}
+.nav-cta{border-radius:30px;background:#e00018;color:#fff;padding:14px 25px;min-height:58px;font-size:18px;gap:12px;white-space:nowrap}
+.nav-cta:hover{background:#b90016}
+.whatsapp-mark{font-size:25px;border:2px solid white;border-radius:50%;width:28px;height:28px;display:inline-grid;place-items:center;line-height:1}
+.lang-toggle{display:none}
+.menu-toggle{color:#092963}
+.hero{min-height:570px;color:#fff;background-image:linear-gradient(90deg,rgba(3,31,88,.98) 0%,rgba(3,31,88,.92) 28%,rgba(3,31,88,.42) 48%,rgba(3,31,88,0) 70%),url("arizona-global-hero.jpg");background-size:cover;background-position:center;background-repeat:no-repeat;overflow:hidden}
+.hero-grid{min-height:570px;display:flex;align-items:center;padding-top:25px;padding-bottom:35px}
+.hero-content{max-width:760px}
+.hero h1{font-size:clamp(48px,5vw,76px);line-height:1.06;letter-spacing:-2px;color:#fff;font-weight:800;margin:0 0 8px}
+.hero-subtitle{font-size:clamp(32px,3.2vw,49px);line-height:1.2;color:#fff;font-weight:700}
+.hero-subtitle em{font-family:"Brush Script MT","Segoe Script",cursive;font-size:1.35em;color:#ffc33e;font-weight:500}
+.hero-copy{font-size:24px;line-height:1.4;color:#fff;font-weight:600;margin:34px 0 25px}
+.hero-actions{margin-top:25px}
+.hero .btn-red{border-radius:28px;background:#e00018;padding:16px 34px;min-height:74px;font-size:23px;box-shadow:0 10px 24px rgba(4,17,53,.24)}
+.hero-arrow{background:#fff;color:#df0018;border-radius:50%;width:39px;height:39px;display:inline-grid;place-items:center;font-size:25px;margin-left:8px}
+.trust-strip{background:#eef3ff;border:0;padding:10px 0 30px}
+.trust-grid{width:min(1428px,calc(100% - 108px));padding:0;min-height:98px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:#fff;border:1px solid #dce5f4;border-radius:18px;box-shadow:0 6px 18px rgba(7,34,90,.16);overflow:hidden}
+.trust-item{display:flex;justify-content:flex-start;align-items:center;gap:18px;padding:14px 28px;color:#092963;font-size:17px;border-right:1px solid #123b86}
+.trust-item:last-child{border-right:0}
+.trust-item>span:last-child{display:flex;flex-direction:column;gap:3px}
+.trust-item strong{font-size:19px;white-space:nowrap}
+.trust-item small{font-size:16px;font-weight:400;white-space:nowrap}
+.feature-symbol{font-size:46px;line-height:1;color:#123d91;min-width:60px;text-align:center}
+.reference-footer{background:#031e55 url("arizona-global-hero.jpg") center bottom/cover;color:#fff;padding:38px 0 15px;position:relative}
+.footer-reference-grid{display:grid;grid-template-columns:1fr 1.65fr 1.5fr 1.65fr;align-items:center;gap:28px;min-height:95px}
+.footer-location,.footer-contact,.footer-social{min-height:74px;border-right:2px solid rgba(255,255,255,.85);display:flex;align-items:center;gap:15px;padding-right:25px}
+.footer-icon{font-size:31px}
+.footer-location strong,.footer-social strong{display:block;font-size:19px}
+.footer-location small{display:block;font-size:16px;margin-top:3px}
+.footer-contact{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:8px;font-size:18px;font-weight:600}
+.footer-contact a{display:flex;gap:15px;align-items:center}
+.footer-contact a span{font-size:24px}
+.footer-social{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:9px}
+.social-circles{display:flex;gap:17px}
+.social-circles a{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#0a2d70;font-weight:900;font-size:21px}
+.footer-tagline{font-family:"Brush Script MT","Segoe Script",cursive;font-size:31px;line-height:1.05;font-style:italic;text-align:center;position:relative}
+.footer-tagline i{display:block;width:170px;height:14px;border-top:4px solid #ffc33e;border-radius:50%;transform:rotate(-8deg);margin:7px auto 0}
+.footer-bottom{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#d7e2f5;font-size:11px;margin-top:15px}
+.reference-footer .disclaimer{margin:0;font-size:10px;color:#c0cce0}
+section{scroll-margin-top:20px}
+body[dir="rtl"] .top-contact,body[dir="rtl"] .topbar-inner,body[dir="rtl"] .nav,body[dir="rtl"] .nav-links{direction:rtl}
+body[dir="rtl"] .nav-dropdown a span{margin-left:0;margin-right:5px}
+body[dir="rtl"] .hero-content{text-align:right}
+body[dir="rtl"] .hero{background-image:linear-gradient(270deg,rgba(3,31,88,.98) 0%,rgba(3,31,88,.92) 28%,rgba(3,31,88,.42) 48%,rgba(3,31,88,0) 70%),url("arizona-global-hero.jpg")}
+body[dir="rtl"] .trust-item{border-right:0;border-left:1px solid #123b86}
+body[dir="rtl"] .trust-item:last-child{border-left:0}
+body[dir="rtl"] .footer-location,body[dir="rtl"] .footer-contact,body[dir="rtl"] .footer-social{border-right:0;border-left:2px solid rgba(255,255,255,.85);padding-right:0;padding-left:25px}
+body[dir="rtl"] .footer-contact{align-items:flex-start}
+body[dir="rtl"] .footer-tagline{text-align:center}
+@media(max-width:1150px){
+ .container{width:calc(100% - 42px)}.nav{gap:14px}.arizona-official-logo{width:235px}
+ .nav-links{gap:14px;font-size:15px}.nav-cta{font-size:15px;padding:12px 18px}
+ .trust-grid{width:calc(100% - 42px)}.trust-item{padding:12px 15px;gap:10px}.trust-item strong{font-size:16px}.trust-item small{font-size:13px}.feature-symbol{min-width:42px;font-size:37px}
+}
+@media(max-width:800px){
+ .top-contact{gap:12px;font-size:12px}.top-icon{font-size:18px}.top-language{gap:7px}.top-lang{font-size:12px;padding:6px 8px}
+ .nav{min-height:80px}.arizona-official-logo{width:190px}
+ .menu-toggle{display:block}.nav-links{display:none;position:absolute;top:80px;left:0;right:0;z-index:30;background:#fff;flex-direction:column;align-items:stretch;padding:18px 24px;box-shadow:0 14px 22px rgba(0,20,70,.15)}
+ .nav-links.open{display:flex}.nav-links a.active{padding:10px 15px}.nav-tools{margin-left:auto}.nav-cta{min-height:42px;padding:9px 13px;font-size:13px}
+ .hero,.hero-grid{min-height:490px}.hero{background-position:58% center}.hero-content{max-width:570px}.hero h1{font-size:50px}.hero-subtitle{font-size:34px}.hero-copy{font-size:18px}
+ .trust-grid{grid-template-columns:repeat(2,1fr)}.trust-item:nth-child(2){border-right:0}.trust-item:nth-child(3),.trust-item:nth-child(4){border-top:1px solid #dce5f4}
+ .footer-reference-grid{grid-template-columns:1fr 1fr}.footer-location,.footer-contact{border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:15px}.footer-social{border-right:0}
+}
+@media(max-width:520px){
+ .container{width:calc(100% - 28px)}.topbar,.topbar-inner{height:auto;min-height:48px}.topbar-inner{gap:6px}.top-contact{gap:8px;font-size:10px}.top-contact i{height:18px}.top-icon{font-size:15px}.top-language{gap:4px}.top-lang{font-size:10px;padding:5px 6px}.top-lang.active{padding:5px 9px}
+ .nav{min-height:72px}.arizona-official-logo{width:155px}.nav-cta{font-size:0;padding:9px 12px}.nav-cta .whatsapp-mark{font-size:21px}.nav-links{top:72px}
+ .hero,.hero-grid{min-height:440px}.hero{background-position:59% center;background-image:linear-gradient(90deg,rgba(3,31,88,.98) 0%,rgba(3,31,88,.84) 60%,rgba(3,31,88,.25) 100%),url("arizona-global-hero.jpg")}
+ .hero h1{font-size:39px;letter-spacing:-1.2px}.hero-subtitle{font-size:27px}.hero-copy{font-size:15px;margin:22px 0}.hero .btn-red{min-height:57px;font-size:16px;padding:12px 18px}.hero-arrow{width:29px;height:29px;font-size:19px}
+ .trust-strip{padding:10px 0 20px}.trust-grid{width:calc(100% - 28px);grid-template-columns:1fr}.trust-item{border-right:0;border-bottom:1px solid #dce5f4;padding:12px 20px}.trust-item:last-child{border-bottom:0}.trust-item strong{font-size:16px}.trust-item small{font-size:13px}.feature-symbol{font-size:34px}
+ .footer-reference-grid{grid-template-columns:1fr;gap:15px}.footer-location,.footer-contact,.footer-social{border:0;border-bottom:1px solid rgba(255,255,255,.28);padding:0 0 14px;min-height:0}.footer-tagline{font-size:27px;padding:10px 0}.footer-bottom{font-size:10px}
+ body[dir="rtl"] .footer-location,body[dir="rtl"] .footer-contact,body[dir="rtl"] .footer-social{border:0;border-bottom:1px solid rgba(255,255,255,.28);padding:0 0 14px}
+}
+
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="top-contact">
+        <a href="mailto:info@arizona-immigration.com"><span class="top-icon">✉</span><span>info@arizona-immigration.com</span></a>
+        <i aria-hidden="true"></i>
+        <a href="tel:+962712345678"><span class="top-icon">☎</span><span>+962 7 1234 5678</span></a>
+      </div>
+      <div class="top-language">
+        <button class="top-lang active" type="button" onclick="setLanguage('en')">English</button>
+        <b aria-hidden="true"></b>
+        <button class="top-lang" type="button" onclick="setLanguage('ar')">العربية</button>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Arizona Immigration home">
+        <img src="arizona-brand-logo.png" alt="Arizona Immigration" class="arizona-official-logo">
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks" onclick="toggleMenu()">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a class="active" href="#home" onclick="closeMenu()">Home</a>
+        <a href="#about" onclick="closeMenu()">About Us</a>
+        <div class="nav-dropdown"><a href="#services" onclick="closeMenu()">Services <span>⌄</span></a></div>
+        <div class="nav-dropdown"><a href="#destinations" onclick="closeMenu()">Destinations <span>⌄</span></a></div>
+        <a href="#process" onclick="closeMenu()">How We Work</a>
+        <a href="#contact" onclick="closeMenu()">Contact</a>
+      </nav>
+      <div class="nav-tools">
+        <a class="nav-cta" href="#contact"><span class="whatsapp-mark">◉</span><span>Contact Us</span></a>
+        <button class="lang-toggle" type="button" onclick="toggleLanguage()" aria-label="Switch language">العربية</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Arizona Immigration</h1>
+          <div class="hero-subtitle">Your <em>Global</em> Journey Starts Here</div>
+          <p class="hero-copy">Visa &amp; Immigration Services | Education | Conferences</p>
+          <div class="hero-actions">
+            <a class="btn btn-red" href="#contact">Get Free Consultation <span class="hero-arrow">➜</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-strip">
+      <div class="container trust-grid">
+        <div class="trust-item"><span class="feature-symbol">◎</span><span><strong>Immigration Services</strong><small>Family, Employment &amp; More</small></span></div>
+        <div class="trust-item"><span class="feature-symbol">◆</span><span><strong>Study Abroad</strong><small>Top Universities Worldwide</small></span></div>
+        <div class="trust-item"><span class="feature-symbol">▦</span><span><strong>Conferences &amp; Events</strong><small>Expand Your Opportunities</small></span></div>
+        <div class="trust-item"><span class="feature-symbol">♧</span><span><strong>Expert Support</strong><small>Every Step of the Way</small></span></div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div class="about-art">
+          <img src="engineer.jpg" alt="Eng. Mohammad Al-Maraaziq" class="about-leader-photo">
+          <div class="about-leader-caption">
+            <strong>Eng. Mohammad Al-Maraaziq</strong>
+            <span class="management-caption">Under the Management and Supervision</span>
+          </div>
+        </div>
+        <div class="about-copy">
+          <h2>About Arizona Immigration</h2>
+          <p>We help individuals and families explore visa, immigration, study, and conference opportunities through clear information and organized application support.</p>
+          <div class="vision-box"><h3>Our Vision</h3><p>To be a trusted source of clear information and professional support for people exploring international opportunities.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-head">
+          <h2>Our Services</h2>
+          
+        </div>
+        <div class="cards">
+          <article class="card"><div class="card-icon">✈</div><h3>Visa Services</h3><p>Visa information and application support.</p><a class="text-link" href="#contact">Ask About This Service →</a></article>
+          <article class="card"><div class="card-icon">⌂</div><h3>Immigration Services</h3><p>Guidance on immigration options and procedures.</p><a class="text-link" href="#contact">Ask About This Service →</a></article>
+          <article class="card"><div class="card-icon">▤</div><h3>Study &amp; Universities</h3><p>Research on study options and university requirements.</p><a class="text-link" href="#contact">Ask About This Service →</a></article>
+          <article class="card"><div class="card-icon">◎</div><h3>Conferences &amp; Events</h3><p>Research on conferences and participation requirements.</p><a class="text-link" href="#contact">Ask About This Service →</a></article>
+          <article class="card"><div class="card-icon">▣</div><h3>Document Preparation</h3><p>Help organizing and reviewing application documents.</p><a class="text-link" href="#contact">Ask About This Service →</a></article>
+          <article class="card"><div class="card-icon">✉</div><h3>Client Support</h3><p>Client communication and application follow-up.</p><a class="text-link" href="#contact">Ask About This Service →</a></article>
+        </div>
+                <!-- Choose Your Destination -->
+        <div class="section-head" id="destinations" style="margin-top:70px;">
+          <h2>Visa Destinations</h2>
+          <p>Choose a destination to see the available visa categories.</p>
+        </div>
+
+        <div class="destination-grid">
+
+         <button class="destination-card" type="button" onclick="showVisaTypes('United States')">
+          <span class="destination-flag">🇺🇸</span>
+                <strong>United States</strong>
+                <span>View Visa Types →</span>
+                </button>
+ 
+          <button class="destination-card" type="button" onclick="showVisaTypes('Canada')">
+              <span class="destination-flag">🇨🇦</span>
+              <strong>Canada</strong>
+              <span>View Visa Types →</span>
+              </button>
+
+          <button class="destination-card" type="button" onclick="showVisaTypes('Australia')">
+            <span class="destination-flag">🇦🇺</span>
+            <strong>Australia</strong>
+            <span>View Visa Types →</span>
+          </button>
+
+          <button class="destination-card" type="button" onclick="showVisaTypes('United Kingdom')">
+            <span class="destination-flag">🇬🇧</span>
+            <strong>United Kingdom</strong>
+            <span>View Visa Types →</span>
+          </button>
+
+          <button class="destination-card" type="button" onclick="showVisaTypes('Schengen Countries')">
+            <span class="destination-flag">🇪🇺</span>
+            <strong>Schengen Countries</strong>
+            <span>View Visa Types →</span>
+          </button>
+
+          <button class="destination-card" type="button" onclick="showVisaTypes('East Asia')">
+            <span class="destination-flag">🌏</span>
+            <strong>East Asia</strong>
+            <span>View Visa Types →</span>
+          </button>
+
+         <button class="destination-card" type="button" onclick="showVisaTypes('Mexico')">
+  <span class="destination-flag">🇲🇽</span>
+  <strong>Mexico</strong>
+  <span>View Visa Types →</span>
+</button>
+
+</div> <!-- نهاية destination-grid -->
+
+<!-- Visa Options -->
+<div id="visaOptions" style="display:none; margin-top:40px;">
+  <div id="visaTypes" class="destination-grid" aria-live="polite"></div>
+  <div class="section-head">
+    <h2 id="selectedCountry"></h2>
+    <p>Select the visa service you are interested in.</p>
+  </div>
+
+  <!-- Visa Inquiry Form -->
+<div id="inquiryForm" style="display:none; margin-top:40px;">
+
+  <div class="section-head">
+    <h2>Visa Inquiry</h2>
+    <p>Complete the form and continue to WhatsApp.</p>
+  </div>
+
+  <form id="visaInquiryForm">
+
+    <div class="form-group">
+      <label for="clientName">Full Name</label>
+      <input type="text" id="clientName" required
+             placeholder="Enter your full name">
+    </div>
+
+    <div class="form-group">
+      <label for="clientPhone">Phone Number</label>
+      <input type="tel" id="clientPhone" required
+             placeholder="+962 7X XXX XXXX">
+    </div>
+
+    <div class="form-group">
+      <label for="destinationName">Selected Destination</label>
+      <input type="text" id="destinationName" readonly>
+    </div>
+
+    <div class="form-group">
+      <label for="visaTypeName">Visa Service</label>
+      <input type="text" id="visaTypeName" readonly>
+    </div>
+
+    <div class="form-group">
+      <label for="clientSituation">Brief Explanation of Your Situation</label>
+      <textarea id="clientSituation" rows="5" required
+                placeholder="Please briefly explain your situation..."></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-red">
+      Continue to WhatsApp →
+    </button>
+
+  </form>
+</div>
+
+
+</div>
+
+</div> <!-- نهاية container -->
+</section> <!-- نهاية services -->
+<section class="process" id="process">
+      <div class="container">
+        <div class="section-head">
+          <h2>How It Works</h2>
+          
+        </div>
+        <div class="steps">
+          <div class="step"><div class="step-number">01</div><h3>Tell Us What You Need</h3><p>Choose the service and share your goal.</p></div>
+          <div class="step"><div class="step-number">02</div><h3>Review Requirements</h3><p>We help identify relevant information and official requirements.</p></div>
+          <div class="step"><div class="step-number">03</div><h3>Prepare Documents</h3><p>Organize the information and supporting documents.</p></div>
+          <div class="step"><div class="step-number">04</div><h3>Follow Up</h3><p>Receive updates about the next administrative steps.</p></div>
+        </div>
+      </div>
+    </section>
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <p>Call, email, or send your inquiry through the form.</p>
+
+      <div class="contact-detail">
+        Jordan Office
+        <span>
+          Amman, Jordan<br>
+          University of Jordan Street<br>
+          Opposite University Mosque Traffic Light<br>
+          Arab Bank Complex
+        </span>
+      </div>
+
+      <div class="contact-detail">
+        Jordan Phone / WhatsApp
+        <span>
+          <a href="tel:+962799628705">+962 79 962 8705</a>
+        </span>
+      </div>
+
+      <div class="contact-detail">
+        USA Office
+        <span>
+          320 Spruce Street<br>
+          Spartanburg, SC 29303<br>
+          United States
+        </span>
+      </div>
+
+      <div class="contact-detail">
+        USA Phone
+        <span>
+          <a href="tel:+19295980299">+1 929 598 0299</a>
+        </span>
+      </div>
+
+      <div class="contact-detail">
+        Email
+  <span>
+    <a href="mailto:info@arizonaservicesorg.com">
+      info@arizonaservicesorg.com
+    </a>
+      </span>
+</div>
+    </div>
+
+    <form id="contactForm" onsubmit="handleForm(event)">
+      <div class="form-row">
+        <div>
+          <label for="name">Full Name</label>
+          <input id="name" name="name" placeholder="Your full name" required>
+        </div>
+        <div>
+          <label for="email">Email Address</label>
+          <input id="email" name="email" type="email" placeholder="name@example.com" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div>
+          <label for="service">Service of Interest</label>
+          <select id="service" name="service" required>
+            <option value="" selected disabled>Choose a service</option>
+            <option>Visa Services</option>
+            <option>Immigration Services</option>
+            <option>Study &amp; Universities</option>
+            <option>Conferences &amp; Events</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="country">Country of Interest</label>
+          <input id="country" name="country" placeholder="e.g. United States">
+        </div>
+      </div>
+
+      <label for="message">How can we help?</label>
+      <textarea id="message" name="message" placeholder="Tell us briefly about your inquiry..."></textarea>
+
+      <button class="btn btn-red" type="submit">Send Inquiry →</button>
+
+      <p class="form-note">When you submit, WhatsApp will open with your inquiry ready to send. Your message is not submitted until you press Send in WhatsApp.</p>
+
+      <p id="formMessage" class="form-note" role="status"></p>
+    </form>
+
+  </div>
+</section>
+  </main>
+
+  <footer class="reference-footer">
+    <div class="container footer-reference-grid">
+      <div class="footer-location"><span class="footer-icon">♦</span><div><strong>Amman, Jordan</strong><small>(Main Office)</small></div></div>
+      <div class="footer-contact">
+        <a href="tel:+962712345678"><span>☎</span> +962 7 1234 5678</a>
+        <a href="mailto:info@arizona-immigration.com"><span>✉</span> info@arizona-immigration.com</a>
+      </div>
+      <div class="footer-social"><strong>Follow Us</strong><div class="social-circles"><a href="#contact" aria-label="Facebook">f</a><a href="#contact" aria-label="Instagram">◎</a><a href="#contact" aria-label="LinkedIn">in</a><a href="#contact" aria-label="YouTube">▶</a></div></div>
+      <div class="footer-tagline">Your Trusted Partner<br>in Global Opportunities<i></i></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> Arizona Immigration. All rights reserved.</span><span class="disclaimer">Arizona Immigration is not a government agency.</span></div>
+  </footer>
+
+  <script>
+const translations = {
+"Professional Immigration & Visa Support":"خدمات الهجرة والتأشيرات باحترافية",
+"Clear Guidance · Organized Service · Informed Decisions":"إرشاد واضح · خدمة منظمة · قرارات مبنية على المعرفة",
+"Home":"الرئيسية","Destinations":"الوجهات","Services":"الخدمات","How It Works":"كيف نعمل؟","About":"من نحن","About Us":"من نحن","Leadership":"الإدارة","Updates":"آخر التحديثات","Contact":"اتصل بنا","Get in Touch":"تواصل معنا",
+"Your Journey.":"رحلتك.","Our Guidance.":"ونحن نرشدك.",
+"Clear information and practical support for your international plans.":"اكتشف فرصك الدولية مع دعم منظم ومعلومات واضحة وإرشاد خلال مراحل تقديم طلبك.",
+"Explore Destinations":"استكشف الوجهات","Contact Us":"تواصل مع فريقنا","Every journey begins with the right information.":"كل رحلة تبدأ بالمعلومة الصحيحة.","General Manager · Arizona Immigration":"المدير العام · أريزونا للهجرة",
+"Visa &amp; Immigration":"معلومات واضحة ومنظمة","Study &amp; Universities":"دعم خلال جميع المراحل","Conferences &amp; Events":"فرص دولية",
+"Who We Are":"من نحن","Helping you move forward with confidence.":"نساعدك على التقدم بثقة.",
+"Under the Management and Supervision":"بإدارة وإشراف المهندس محمد المرازيق",
+"Our Vision":"رؤيتنا","To become a trusted destination for individuals and families seeking international opportunities by providing clear information, structured professional support, and guidance that empowers our clients to take informed steps toward a world of greater possibilities.":"أن نكون وجهة موثوقة للأفراد والعائلات الساعين إلى استكشاف الفرص الدولية، من خلال تقديم معلومات واضحة، ودعم مهني منظم، ومرافقة عملائنا في اتخاذ خطوات مدروسة نحو مستقبل أوسع من الفرص.",
+"Arizona Immigration supports individuals and families as they explore immigration, visa, education, and international participation opportunities. We believe that every successful application begins with understanding the requirements and preparing information carefully.":"تقدم أريزونا للهجرة الدعم للأفراد والعائلات لاستكشاف فرص الهجرة والتأشيرات والتعليم والمشاركة الدولية. ونؤمن أن كل طلب ناجح يبدأ بفهم المتطلبات وتجهيز المعلومات بعناية.",
+"Our goal is to make complex processes easier to understand through clear communication, organized follow-up, and responsible service.":"هدفنا تسهيل فهم الإجراءات المعقدة من خلال التواصل الواضح والمتابعة المنظمة وتقديم الخدمة بمسؤولية.",
+"Client-focused communication":"تواصل يركز على العميل","Organized application support":"دعم منظم للطلبات","Practical information":"معلومات عملية","Professional follow-up":"متابعة مهنية",
+"What We Do":"ماذا نقدم؟","Services designed around your next step.":"خدمات تساعدك في خطوتك التالية.","Explore the areas where our team can help you understand options, prepare information, and organize your next steps.":"تعرّف على المجالات التي يمكن لفريقنا مساعدتك فيها لفهم الخيارات وتجهيز المعلومات وتنظيم الخطوات التالية.",
+"Visa Services":"خدمات التأشيرات","Visa information and application support.":"معلومات ودعم في إعداد الطلبات للزوار والمسافرين الراغبين في السفر إلى الخارج.","Immigration Services":"خدمات الهجرة","Guidance on immigration options and procedures.":"إرشاد ودعم إداري للأفراد والعائلات الراغبين في استكشاف مسارات الهجرة.","Study & Universities":"الدراسة والجامعات","Research on study options and university requirements.":"المساعدة في البحث عن الفرص التعليمية ومتطلبات الجامعات ومعلومات التقديم.","Conferences & Events":"المؤتمرات والفعاليات","Research on conferences and participation requirements.":"دعم البحث عن المؤتمرات الدولية والفعاليات المهنية ومتطلبات المشاركة.","Document Preparation":"إعداد الوثائق","Help organizing and reviewing application documents.":"المساعدة في تنظيم معلومات الطلب ومراجعة الوثائق للتأكد من اكتمالها واتساقها.","Client Support":"دعم العملاء","Client communication and application follow-up.":"تواصل مستمر لمساعدة العملاء على فهم المعلومات المطلوبة ومستجدات الإجراءات.","Learn More →":"اعرف المزيد ←",
+"Choose Your Destination":"اختر وجهتك","Explore Your Options":"استكشف خياراتك","Select your destination to explore the visa services available through Arizona Immigration.":"اختر وجهتك للتعرّف على خدمات التأشيرات المتاحة من خلال أريزونا للهجرة.","United States":"الولايات المتحدة","Canada":"كندا","Australia":"أستراليا","United Kingdom":"المملكة المتحدة","Schengen Countries":"دول الشنغن","East Asia":"شرق آسيا","Mexico":"المكسيك","Explore Visa Services →":"استكشف خدمات التأشيرات ←",
+"Select the visa service you are interested in.":"اختر خدمة التأشيرة التي تهمك.","Your Inquiry":"استفسارك","Visa Inquiry Form":"نموذج الاستفسار عن التأشيرة","Please provide your details so our team can assist you.":"يرجى إدخال بياناتك حتى يتمكن فريقنا من مساعدتك.","Full Name":"الاسم الكامل","Phone Number":"رقم الهاتف","Selected Destination":"الوجهة المختارة","Visa Service":"خدمة التأشيرة","Brief Explanation of Your Situation":"اشرح وضعك باختصار","Continue to WhatsApp →":"المتابعة إلى واتساب ←",
+"Leadership Photo Placeholder":"مكان صورة الإدارة","The approved photo of the company representative will be placed here.":"ستُضاف هنا الصورة المعتمدة لممثل الشركة.","Leadership & Our Vision":"الإدارة ورؤيتنا","Guided by experience. Focused on people.":"نسترشد بالخبرة ونضع الإنسان أولاً.","This section introduces the leadership of Arizona Immigration and the vision behind the company's work. We will add the approved portrait, name, official title, and a verified professional biography here.":"يعرّف هذا القسم بقيادة أريزونا للهجرة والرؤية التي توجه عمل الشركة. ستُضاف هنا الصورة المعتمدة والاسم والمسمى الوظيفي والسيرة المهنية الموثقة.","“Our commitment is to provide clear information and professional support at every step.”":"«نلتزم بتقديم معلومات واضحة ودعم مهني في كل خطوة».","[Leadership Name]":"[اسم المسؤول]","[Official Position / Title]":"[المسمى الوظيفي الرسمي]",
+"How We Work":"كيف نعمل؟","A clear process, one step at a time.":"خطوات واضحة، خطوة تلو الأخرى.","Every case and service is different. Our general approach starts with understanding the request and identifying the relevant requirements.":"لكل حالة وخدمة خصوصيتها. نبدأ بفهم الطلب وتحديد المتطلبات ذات الصلة.","01 / UNDERSTAND":"01 / الفهم","Understand Your Goal":"نفهم هدفك","We learn about your purpose, circumstances, and the service you are seeking.":"نتعرف على هدفك وظروفك والخدمة التي تبحث عنها.","02 / RESEARCH":"02 / البحث","Review the Requirements":"مراجعة المتطلبات","We identify relevant information and direct you to applicable official requirements.":"نحدد المعلومات ذات الصلة ونرشدك إلى المتطلبات الرسمية المناسبة.","03 / PREPARE":"03 / التجهيز","Organize the Next Steps":"تنظيم الخطوات التالية","We help organize information and supporting documents for the process.":"نساعدك في تنظيم المعلومات والوثائق الداعمة للإجراء.","04 / SUPPORT":"04 / المتابعة","Stay Informed":"ابقَ على اطلاع","We communicate updates and help clarify administrative next steps.":"نوافيك بالتحديثات ونساعدك على فهم الخطوات الإدارية التالية.",
+"News & Updates":"الأخبار والتحديثات","Stay informed.":"ابقَ على اطلاع.","Important announcements and useful information will be shared here. Updates should always include a source and publication date.":"ستُنشر هنا الإعلانات المهمة والمعلومات المفيدة، مع ذكر المصدر وتاريخ النشر لكل تحديث.","Client Information · Essential Guide":"معلومات العملاء · دليل أساسي","Before you apply: start with the official requirements.":"قبل التقديم: ابدأ بالمتطلبات الرسمية.","Visa rules, document checklists, fees, and appointment procedures can change. Always confirm the latest instructions on the official website of the destination country before submitting an application.":"قد تتغير قواعد التأشيرات وقوائم الوثائق والرسوم وإجراءات المواعيد. تحقق دائماً من أحدث التعليمات على الموقع الرسمي لبلد الوجهة قبل تقديم الطلب.","Ask our team about your next step →":"اسأل فريقنا عن خطوتك التالية ←","Application Preparation":"تجهيز الطلب","Keep your information consistent":"حافظ على اتساق معلوماتك","Review names, dates, travel history, and supporting documents carefully before submission.":"راجع الأسماء والتواريخ وسجل السفر والوثائق الداعمة بعناية قبل التقديم.","Important Notice":"تنويه مهم","Visa decisions belong to the authorities":"قرار التأشيرة من اختصاص الجهات الرسمية","Arizona Immigration does not issue visas and cannot guarantee an approval or a specific processing time.":"أريزونا للهجرة لا تصدر التأشيرات ولا تضمن الموافقة أو مدة معالجة محددة.","These are general client-information articles, not breaking-news reports. Official policy updates will be published here only after verification against the relevant government source, with a publication date and source link.":"هذه مقالات إرشادية عامة للعملاء وليست أخباراً عاجلة. لن تُنشر تحديثات السياسات الرسمية إلا بعد التحقق منها عبر المصدر الحكومي المعني، مع تاريخ النشر ورابط المصدر.",
+"Contact Us":"اتصل بنا","Let's talk about your next step.":"لنتحدث عن خطوتك التالية.","Contact one of our offices and our team will be happy to assist you.":"تواصل مع أحد مكاتبنا وسيسعد فريقنا بمساعدتك.","Jordan Office":"مكتب الأردن","Amman, Jordan":"عمّان، الأردن","University of Jordan Street":"شارع الجامعة الأردنية","Opposite University Mosque Traffic Light":"مقابل إشارة مسجد الجامعة","Arab Bank Complex":"مجمع البنك العربي","Jordan Phone / WhatsApp":"هاتف الأردن / واتساب","USA Office":"مكتب الولايات المتحدة","USA Phone":"هاتف الولايات المتحدة","Email":"البريد الإلكتروني","Email Address":"البريد الإلكتروني","Service of Interest":"الخدمة المطلوبة","Choose a service":"اختر الخدمة","Other":"أخرى","Country of Interest":"البلد المطلوب","How can we help?":"كيف يمكننا مساعدتك؟","Send Inquiry →":"إرسال الاستفسار ←","When you submit, WhatsApp will open with your inquiry ready to send. Your message is not submitted until you press Send in WhatsApp.":"عند الإرسال، سيفتح واتساب برسالتك جاهزة. لن يصل الاستفسار إلا بعد الضغط على إرسال داخل واتساب.","Visa, immigration, study, and conference support.":"معلومات واضحة. دعم منظم. خطوة تالية بثقة أكبر.","Explore":"استكشف","Our Services":"خدماتنا",
+"Immigration &amp; Visa":"الهجرة والتأشيرات",
+"Services":"الخدمات",
+"Explore your options. Understand the requirements. Get organized support for your next step.":"استكشف خياراتك، وافهم المتطلبات، واحصل على دعم منظم لخطوتك التالية.",
+"View Destinations":"عرض الوجهات",
+"Contact Us":"اتصل بنا",
+"Visa &amp; Immigration":"التأشيرات والهجرة",
+"Study &amp; Universities":"الدراسة والجامعات",
+"Conferences &amp; Events":"المؤتمرات والفعاليات",
+"About Arizona Immigration":"عن أريزونا للهجرة",
+"We help individuals and families explore visa, immigration, study, and conference opportunities through clear information and organized application support.":"نساعد الأفراد والعائلات على استكشاف فرص التأشيرات والهجرة والدراسة والمؤتمرات من خلال معلومات واضحة ودعم منظم للطلبات.",
+"Our Vision":"رؤيتنا",
+"To be a trusted source of clear information and professional support for people exploring international opportunities.":"أن نكون مصدرًا موثوقًا للمعلومات الواضحة والدعم المهني للراغبين في استكشاف الفرص الدولية.",
+"Ask About This Service →":"استفسر عن هذه الخدمة ←",
+"Choose a destination to see the available visa categories.":"اختر وجهتك للاطلاع على فئات التأشيرات المتاحة.",
+"View Visa Types →":"عرض أنواع التأشيرات ←",
+"Visa Inquiry":"استفسار عن تأشيرة",
+"Complete the form and continue to WhatsApp.":"أكمل النموذج ثم تابع إلى واتساب.",
+"Tell Us What You Need":"أخبرنا بما تحتاج إليه",
+"Choose the service and share your goal.":"اختر الخدمة وشاركنا هدفك.",
+"Review Requirements":"مراجعة المتطلبات",
+"Prepare Documents":"تجهيز الوثائق",
+"Receive updates about the next administrative steps.":"تابع المستجدات والخطوات الإدارية التالية.",
+"Call, email, or send your inquiry through the form.":"اتصل بنا أو أرسل استفسارك عبر النموذج.",
+"Visa, immigration, study, and conference services.":"خدمات التأشيرات والهجرة والدراسة والمؤتمرات.",
+"Your Plans.":"خططك.","Our Support.":"ودعمنا.",
+"Immigration and visa support, made clearer.":"دعم أوضح للهجرة والتأشيرات.",
+"A trusted guide to international opportunities.":"وجهة موثوقة للفرص الدولية.",
+"Under the Management and Supervision":"بإدارة وإشراف المهندس محمد المرازيق","Contact Form":"نموذج التواصل","Phone / WhatsApp":"الهاتف / واتساب","Arizona Immigration. All rights reserved.":"أريزونا للهجرة. جميع الحقوق محفوظة.","Arizona Immigration":"صُمم بوضوح واهتمام.",
+"Tourist":"سياحة","Visit":"زيارة","Study":"دراسة","Family Reunification":"لمّ الشمل العائلي","Diversity Visa Lottery":"قرعة الهجرة (DV)","Schengen Visa":"تأشيرة شنغن","Japan":"اليابان","China":"الصين","South Korea":"كوريا الجنوبية","France":"فرنسا","Germany":"ألمانيا","Italy":"إيطاليا","Spain":"إسبانيا","Netherlands":"هولندا","Switzerland":"سويسرا","Greece":"اليونان","Austria":"النمسا","Belgium":"بلجيكا","Sweden":"السويد","Portugal":"البرتغال","Choose this country →":"اختر هذه الدولة ←","Continue to inquiry →":"المتابعة للاستفسار ←",
+"Your Plans.<br><em>Our Support.</em>":"خططك.<br><em>ودعمنا.</em>",
+"Clear information and practical support for your international plans.":"معلومات واضحة ودعم عملي لخططك الدولية.",
+"Immigration and visa support, made clearer.":"دعم أوضح للهجرة والتأشيرات.",
+"We provide clear information and organized application support.":"نقدم معلومات واضحة ودعماً منظماً للطلبات.",
+"A trusted guide to international opportunities.":"وجهة موثوقة للفرص الدولية.",
+"Under the Management and Supervision":"بإدارة وإشراف المهندس محمد المرازيق",
+"Our Services":"خدماتنا",
+"Immigration &amp; Visa":"الهجرة والتأشيرات",
+"Services":"الخدمات",
+"Explore your options. Understand the requirements. Get organized support for your next step.":"استكشف خياراتك، وافهم المتطلبات، واحصل على دعم منظم لخطوتك التالية.",
+"View Destinations":"عرض الوجهات",
+"Contact Us":"اتصل بنا",
+"Visa &amp; Immigration":"التأشيرات والهجرة",
+"Study &amp; Universities":"الدراسة والجامعات",
+"Conferences &amp; Events":"المؤتمرات والفعاليات",
+"About Arizona Immigration":"عن أريزونا للهجرة",
+"We help individuals and families explore visa, immigration, study, and conference opportunities through clear information and organized application support.":"نساعد الأفراد والعائلات على استكشاف فرص التأشيرات والهجرة والدراسة والمؤتمرات من خلال معلومات واضحة ودعم منظم للطلبات.",
+"Our Vision":"رؤيتنا",
+"To be a trusted source of clear information and professional support for people exploring international opportunities.":"أن نكون مصدرًا موثوقًا للمعلومات الواضحة والدعم المهني للراغبين في استكشاف الفرص الدولية.",
+"Ask About This Service →":"استفسر عن هذه الخدمة ←",
+"Choose a destination to see the available visa categories.":"اختر وجهتك للاطلاع على فئات التأشيرات المتاحة.",
+"View Visa Types →":"عرض أنواع التأشيرات ←",
+"Visa Inquiry":"استفسار عن تأشيرة",
+"Complete the form and continue to WhatsApp.":"أكمل النموذج ثم تابع إلى واتساب.",
+"Tell Us What You Need":"أخبرنا بما تحتاج إليه",
+"Choose the service and share your goal.":"اختر الخدمة وشاركنا هدفك.",
+"Review Requirements":"مراجعة المتطلبات",
+"Prepare Documents":"تجهيز الوثائق",
+"Receive updates about the next administrative steps.":"تابع المستجدات والخطوات الإدارية التالية.",
+"Call, email, or send your inquiry through the form.":"اتصل بنا أو أرسل استفسارك عبر النموذج.",
+"Visa, immigration, study, and conference services.":"خدمات التأشيرات والهجرة والدراسة والمؤتمرات.",
+"Your Plans.":"خططك.","Our Support.":"ودعمنا.",
+"Immigration and visa support, made clearer.":"دعم أوضح للهجرة والتأشيرات.",
+"A trusted guide to international opportunities.":"وجهة موثوقة للفرص الدولية.",
+"Under the Management and Supervision":"بإدارة وإشراف المهندس محمد المرازيق",
+"Visa information and application support.":"معلومات ودعم في إعداد طلبات التأشيرات.",
+"Guidance on immigration options and procedures.":"إرشاد حول خيارات وإجراءات الهجرة.",
+"Research on study options and university requirements.":"بحث خيارات الدراسة ومتطلبات الجامعات.",
+"Research on conferences and participation requirements.":"بحث المؤتمرات ومتطلبات المشاركة.",
+"Help organizing and reviewing application documents.":"المساعدة في تنظيم ومراجعة وثائق الطلب.",
+"Client communication and application follow-up.":"التواصل مع العملاء ومتابعة الطلبات.",
+"Visa Destinations":"وجهات التأشيرات",
+"Select a country or region to view available visa services.":"اختر دولة أو منطقة لعرض خدمات التأشيرات المتاحة.",
+"How It Works":"كيف نعمل؟",
+"Tell Us Your Goal":"أخبرنا عن هدفك","Tell Us What You Need":"أخبرنا بما تحتاج إليه","Choose the service and share your goal.":"اختر الخدمة وشاركنا هدفك.",
+"Share your plans and circumstances.":"شاركنا خططك وظروفك.",
+"Review Options":"مراجعة الخيارات","Review Requirements":"مراجعة المتطلبات",
+"We identify relevant requirements and official sources.":"نحدد المتطلبات ذات الصلة والمصادر الرسمية.",
+"Prepare":"التجهيز",
+"We help organize your information and documents.":"نساعدك في تنظيم معلوماتك ووثائقك.",
+"Follow Up":"المتابعة","Prepare Documents":"تجهيز الوثائق",
+"We keep you informed about next steps.":"نبقيك على اطلاع بالخطوات التالية.",
+"Contact Arizona Immigration":"تواصل مع أريزونا للهجرة",
+"Send us your inquiry or contact one of our offices.":"أرسل استفسارك أو تواصل مع أحد مكاتبنا.",
+"Visa, immigration, study, and conference support.":"دعم التأشيرات والهجرة والدراسة والمؤتمرات."
+
+};
+
+Object.assign(translations,{
+"Home":"الرئيسية","About Us":"من نحن","Services":"الخدمات","Destinations":"الوجهات","How We Work":"كيف نعمل؟","Contact":"اتصل بنا","Contact Us":"تواصل معنا",
+"Arizona Immigration":"أريزونا للهجرة","Your":"رحلتك","Global":"العالمية","Journey Starts Here":"تبدأ من هنا",
+"Visa & Immigration Services | Education | Conferences":"خدمات التأشيرات والهجرة | التعليم | المؤتمرات",
+"Get Free Consultation":"احصل على استشارة مجانية",
+"Immigration Services":"خدمات الهجرة","Family, Employment & More":"العائلة والعمل والمزيد",
+"Study Abroad":"الدراسة في الخارج","Top Universities Worldwide":"أفضل الجامعات حول العالم",
+"Conferences & Events":"المؤتمرات والفعاليات","Expand Your Opportunities":"وسّع فرصك",
+"Expert Support":"دعم متخصص","Every Step of the Way":"في كل خطوة من الطريق",
+"Amman, Jordan":"عمّان، الأردن","(Main Office)":"(المكتب الرئيسي)","Follow Us":"تابعونا",
+"Your Trusted Partner":"شريكك الموثوق","in Global Opportunities":"في الفرص العالمية",
+"© ":"© ","All rights reserved.":"جميع الحقوق محفوظة."
+});
+
+let currentLanguage = 'en';
+const originalTextNodes = new WeakMap();
+function t(value){ return currentLanguage === 'ar' ? (translations[value] || value) : value; }
+function setLanguage(lang){
+  currentLanguage=lang;
+  document.documentElement.lang=lang;
+  document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+  document.body.dir=lang==='ar'?'rtl':'ltr';
+  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+  let node; while(node=walker.nextNode()){ if(!originalTextNodes.has(node)) originalTextNodes.set(node,node.nodeValue); const original=originalTextNodes.get(node); const trimmed=original.trim(); if(!trimmed) continue; node.nodeValue=translations[trimmed] && lang==='ar' ? original.replace(trimmed,translations[trimmed]) : original; }
+  document.querySelectorAll('[placeholder]').forEach(el=>{const original=el.getAttribute('data-en-placeholder')||el.placeholder; if(!el.dataset.enPlaceholder)el.dataset.enPlaceholder=original;el.placeholder=lang==='ar'?(translations[el.dataset.enPlaceholder]||el.dataset.enPlaceholder):el.dataset.enPlaceholder;});
+  document.querySelector('.lang-toggle').textContent=lang==='ar'?'English':'العربية';
+  document.querySelector('.lang-toggle').setAttribute('aria-label',lang==='ar'?'Switch to English':'Switch to Arabic');
+  document.querySelectorAll('.top-lang').forEach((button,index)=>button.classList.toggle('active',(lang==='en'&&index===0)||(lang==='ar'&&index===1)));
+  document.title=lang==='ar'?'أريزونا للهجرة | رحلتك تبدأ هنا':'Arizona Immigration | Your Journey Starts Here';
+  document.querySelector('meta[name="description"]').content=lang==='ar'?'أريزونا للهجرة — دعم مهني في خدمات الهجرة والتأشيرات والفرص الدولية.':'Arizona Immigration — professional immigration, visa and international opportunity support.';
+  const heading=document.getElementById('selectedCountry'); if(heading && heading.dataset.en) heading.textContent=t(heading.dataset.en);
+}
+function toggleLanguage(){setLanguage(currentLanguage==='en'?'ar':'en');}
+
+// MOBILE MENU
+
+function toggleMenu() {
+  const nav = document.getElementById('navLinks');
+  const button = document.querySelector('.menu-toggle');
+  const isOpen = nav.classList.toggle('open');
+  button.setAttribute('aria-expanded', String(isOpen));
+  button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+}
+
+function closeMenu() {
+  document.getElementById('navLinks').classList.remove('open');
+  const button = document.querySelector('.menu-toggle');
+  button.setAttribute('aria-expanded', 'false');
+  button.setAttribute('aria-label', 'Open menu');
+}
+
+
+// CONTACT FORM
+
+function handleForm(event) {
+  event.preventDefault();
+  const form = document.getElementById('contactForm');
+  if (!form.reportValidity()) return;
+  const data = new FormData(form);
+  const message = [
+    'New Website Inquiry',
+    '',
+    'Name: ' + (data.get('name') || ''),
+    'Email: ' + (data.get('email') || ''),
+    'Service: ' + (data.get('service') || ''),
+    'Country: ' + (data.get('country') || ''),
+    'Message: ' + (data.get('message') || '')
+  ].join('\n');
+  const url = 'https://wa.me/962799628705?text=' + encodeURIComponent(message);
+  const opened = window.open(url, '_blank', 'noopener');
+  if (!opened) window.location.href = url;
+}
+
+
+// VISA SERVICES
+
+const services = {
+
+  "United States": [
+    "Family Reunification",
+    "Study",
+    "Tourist",
+    "Visit",
+    "Diversity Visa Lottery"
+  ],
+
+  "Canada": [
+    "Tourist",
+    "Visit",
+    "Study",
+    "Family Reunification"
+  ],
+
+  "Australia": [
+    "Tourist",
+    "Visit",
+    "Study"
+  ],
+
+  "United Kingdom": [
+    "Tourist",
+    "Visit",
+    "Study"
+  ],
+
+  "Mexico": [
+    "Tourist",
+    "Visit"
+  ],
+
+  "Japan": [
+    "Tourist",
+    "Visit"
+  ],
+
+  "China": [
+    "Tourist",
+    "Visit"
+  ],
+
+  "South Korea": [
+    "Tourist",
+    "Visit"
+  ]
+
+};
+
+
+// COUNTRY GROUPS
+
+const countryGroups = {
+
+  "Schengen Countries": [
+    "France",
+    "Germany",
+    "Italy",
+    "Spain",
+    "Netherlands",
+    "Switzerland",
+    "Greece",
+    "Austria",
+    "Belgium",
+    "Sweden",
+    "Portugal"
+  ],
+
+  "East Asia": [
+    "Japan",
+    "China",
+    "South Korea"
+  ]
+
+};
+
+
+// SHOW VISA OPTIONS
+
+function showVisaTypes(country, group = null) {
+
+  const visaOptions = document.getElementById('visaOptions');
+  const selectedCountry = document.getElementById('selectedCountry');
+  const visaTypes = document.getElementById('visaTypes');
+  const inquiryForm = document.getElementById('inquiryForm');
+
+  selectedCountry.dataset.en = group ? country + " — " + group : country;
+  selectedCountry.textContent = t(selectedCountry.dataset.en);
+
+  visaTypes.innerHTML = "";
+  inquiryForm.style.display = "none";
+  document.getElementById('destinationName').value = '';
+  document.getElementById('visaTypeName').value = '';
+
+
+  // SHOW COUNTRIES
+
+  if (!group && countryGroups[country]) {
+
+    countryGroups[country].forEach(function(name) {
+
+      const button = document.createElement("button");
+
+      button.className = "destination-card";
+      button.type = "button";
+      button.innerHTML = '<span class="destination-flag">📍</span><strong>' + t(name) + '</strong><span>' + t('Choose this country →') + '</span>';
+
+      button.addEventListener("click", function() {
+        showVisaTypes(name, country);
+      });
+
+      visaTypes.appendChild(button);
+
+    });
+
+  }
+
+
+  // SCHENGEN
+
+  else if (group === "Schengen Countries") {
+
+    showInquiryForm(country, "Schengen Visa");
+
+  }
+
+
+  // EAST ASIA
+
+  else if (group === "East Asia" && services[country]) {
+
+    services[country].forEach(function(service) {
+
+      createVisaButton(country, service, visaTypes);
+
+    });
+
+  }
+
+
+  // OTHER COUNTRIES
+
+  else if (services[country]) {
+
+    services[country].forEach(function(service) {
+
+      createVisaButton(country, service, visaTypes);
+
+    });
+
+  }
+
+
+  visaOptions.style.display = "block";
+
+  visaOptions.scrollIntoView({
+    behavior: "smooth"
+  });
+
+}
+
+
+// CREATE VISA BUTTON
+
+function createVisaButton(country, service, container) {
+
+  const button = document.createElement("button");
+
+  button.className = "destination-card";
+  button.type = "button";
+  button.innerHTML = '<span class="destination-flag">✈️</span><strong>' + t(service) + '</strong><span>' + t('Continue to inquiry →') + '</span>';
+
+  button.addEventListener("click", function() {
+    showInquiryForm(country, service);
+  });
+
+  container.appendChild(button);
+
+}
+
+
+// SHOW INQUIRY FORM
+
+function showInquiryForm(country, service) {
+
+  document.getElementById('destinationName').value = t(country);
+
+  document.getElementById('visaTypeName').value = t(service);
+
+  const inquiryForm = document.getElementById('inquiryForm');
+
+  inquiryForm.style.display = "block";
+
+  inquiryForm.scrollIntoView({
+    behavior: "smooth"
+  });
+
+}
+
+
+// WHATSAPP FORM
+
+document.getElementById('visaInquiryForm').addEventListener('submit', function(event) {
+
+  event.preventDefault();
+
+  const name = document.getElementById('clientName').value.trim();
+
+  const phone = document.getElementById('clientPhone').value.trim();
+
+  const destination = document.getElementById('destinationName').value;
+
+  const visaType = document.getElementById('visaTypeName').value;
+
+  const situation = document.getElementById('clientSituation').value.trim();
+
+
+  const message =
+    "New Visa Inquiry\n\n" +
+    "Full Name: " + name + "\n" +
+    "Phone Number: " + phone + "\n" +
+    "Destination: " + destination + "\n" +
+    "Visa Service: " + visaType + "\n" +
+    "Situation: " + situation;
+
+
+  const whatsappNumber = "962799628705";
+
+  const whatsappURL =
+  "https://wa.me/" + whatsappNumber +
+  "?text=" + encodeURIComponent(message);
+
+  const whatsappWindow = window.open(whatsappURL, "_blank");
+  if (!whatsappWindow) window.location.href = whatsappURL;
+
+});
+
+
+// CURRENT YEAR
+setLanguage('en');
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+</script>
+</body>
+</html>
+<style>
+/* Official Arizona logo asset */
+.arizona-official-logo{display:block;width:230px;max-width:100%;height:auto;object-fit:contain;}
+footer .arizona-official-logo{width:235px;background:#fff;border-radius:10px;padding:8px 10px;}
+@media(max-width:1100px){.arizona-official-logo{width:195px}}
+@media(max-width:700px){.arizona-official-logo{width:155px}footer .arizona-official-logo{width:205px}}
+</style>
